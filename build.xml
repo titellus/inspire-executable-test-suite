@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." 
+  default="schematron-compile-test" 
+  name="ExecutableTestsuite4INSPIREData">
+  <description>Build schematron rules and test INSPIRE datasets.</description>
+
+
+  <!-- Configure here which files to check -->
+  <property name="sch.file" value="ets/ps/inspire_ps_v3.2.sch"/>
+  <property name="xml.file" value="NOR/NOR_4258.gml"/>
+
+  <property name="lib.dir" value="tools/lib"/>
+
+  <target name="schematron-compile-test">
+
+    <!-- expand inclusions-->
+    <xslt basedir="." in="${sch.file}" out="build/${sch.file}-withinclude.sch"
+      style="tools/sch2xslt/iso_dsdl_include.xsl">
+      <classpath>
+        <pathelement location="${lib.dir}/saxon9.jar"/>
+      </classpath>
+    </xslt>
+
+
+
+    <!-- expand abstract patterns -->
+    
+    <xslt basedir="." in="build/${sch.file}-withinclude.sch" 
+      out="build/${sch.file}-final.sch" 
+      style="tools/sch2xslt/iso_abstract_expand.xsl">
+      <classpath>
+        <pathelement location="${lib.dir}/saxon9.jar"/>
+      </classpath>
+    </xslt>
+
+
+
+    <!-- compile it -->
+    <xslt basedir="." in="build/${sch.file}-final.sch" 
+      out="build/${sch.file}.xsl"
+      style="tools/sch2xslt/iso_svrl_for_xslt2.xsl">
+      <classpath>
+        <pathelement location="${lib.dir}/saxon9.jar"/>
+      </classpath>
+    </xslt>
+
+
+
+    <!-- validate -->
+    <xslt basedir="." in="data/${xml.file}" 
+      out="build/${xml.file}.svrl"
+      style="build/${sch.file}.xsl">
+      <classpath>
+        <pathelement location="${lib.dir}/saxon9.jar"/>
+      </classpath>
+    </xslt>
+
+
+
+    <!-- render -->
+    <xslt basedir="." in="build/${xml.file}.svrl" 
+      out="build/${xml.file}.html"
+      style="tools/svrl2html/svrl2html.xsl">
+      <classpath>
+        <pathelement location="${lib.dir}/saxon9.jar"/>
+      </classpath>
+    </xslt>
+    
+  </target>
+</project>

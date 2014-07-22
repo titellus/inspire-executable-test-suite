@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codelist id="http://dd.eionet.europa.eu/vocabulary/cdda/designationtypecategory"
+  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://inspire.ec.europa.eu/draft-schemas/registry/0.3/codelist.xsd">
+  <label xml:lang="en">National designation type category</label>
+  <status id="http://inspire.ec.europa.eu/registry/status/valid">
+    <label xml:lang="en">Valid</label>
+  </status>
+  <extensibility id="http://inspire.ec.europa.eu/registry/extensibility/none">
+    <label xml:lang="en">None</label>
+  </extensibility>
+  <register id="http://dd.eionet.europa.eu/vocabularies">
+    <label xml:lang="en">Data Dictionary Vocabularies</label>
+    <registry id="http://dd.eionet.europa.eu">
+      <label xml:lang="en">Eionet Data Dictionary</label>
+    </registry>
+  </register>
+  <containeditems>
+    <value id="http://dd.eionet.europa.eu/vocabulary/cdda/designationtypecategory/A/view">
+      <label xml:lang="en">Category A</label>
+      <definition xml:lang="en">Designation types used with the intention to protect fauna, flora,
+        habitats and landscapes (the latter as far as relevant for fauna, flora and for habitat
+        protection)</definition>
+      <status id="http://inspire.ec.europa.eu/registry/status/valid">
+        <label xml:lang="en">Valid</label>
+      </status>
+      <register id="http://dd.eionet.europa.eu/vocabularies">
+        <label xml:lang="en">Data Dictionary Vocabularies</label>
+        <registry id="http://dd.eionet.europa.eu">
+          <label xml:lang="en">Eionet Data Dictionary</label>
+        </registry>
+      </register>
+      <codelist id="http://dd.eionet.europa.eu/vocabulary/cdda/designationtypecategory">
+        <label xml:lang="en">National designation type category</label>
+      </codelist>
+    </value>
+    <value id="http://dd.eionet.europa.eu/vocabulary/cdda/designationtypecategory/B">
+      <label xml:lang="en">Category B</label>
+      <definition xml:lang="en">Statutes under sectorial, particularly forestry, legislative and
+        administrative acts providing an adequate protection relevant for fauna, flora and habitat
+        conservation</definition>
+      <status id="http://inspire.ec.europa.eu/registry/status/valid">
+        <label xml:lang="en">Valid</label>
+      </status>
+      <register id="http://dd.eionet.europa.eu/vocabularies">
+        <label xml:lang="en">Data Dictionary Vocabularies</label>
+        <registry id="http://dd.eionet.europa.eu">
+          <label xml:lang="en">Eionet Data Dictionary</label>
+        </registry>
+      </register>
+      <codelist id="http://dd.eionet.europa.eu/vocabulary/cdda/designationtypecategory">
+        <label xml:lang="en">National designation type category</label>
+      </codelist>
+    </value>
+    <value id="http://dd.eionet.europa.eu/vocabulary/cdda/designationtypecategory/C">
+      <label xml:lang="en">Category C</label>
+      <definition xml:lang="en">Private statute providing durable protection for fauna, flora or
+        habitats</definition>
+      <status id="http://inspire.ec.europa.eu/registry/status/valid">
+        <label xml:lang="en">Valid</label>
+      </status>
+      <register id="http://dd.eionet.europa.eu/vocabularies">
+        <label xml:lang="en">Data Dictionary Vocabularies</label>
+        <registry id="http://dd.eionet.europa.eu">
+          <label xml:lang="en">Eionet Data Dictionary</label>
+        </registry>
+      </register>
+      <codelist id="http://dd.eionet.europa.eu/vocabulary/cdda/designationtypecategory">
+        <label xml:lang="en">National designation type category</label>
+      </codelist>
+    </value>
+  </containeditems>
+</codelist>
